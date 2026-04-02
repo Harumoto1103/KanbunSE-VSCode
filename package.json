@@ -2,7 +2,7 @@
     "name": "kanbunse",
     "displayName": "KanbunSE",
     "description": "Language support and execution for KanbunSE (Kanbun S-expression)",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "harumoto1103",
     "icon": "icon.png",
     "engines": {
