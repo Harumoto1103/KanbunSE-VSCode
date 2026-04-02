@@ -3,7 +3,7 @@
     "displayName": "KanbunSE",
     "description": "Language support and execution for KanbunSE (Kanbun S-expression)",
     "version": "0.1.0",
-    "publisher": "harumoto",
+    "publisher": "harumoto1103",
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.60.0"
