@@ -1,0 +1,91 @@
+{
+    "name": "kanbunse",
+    "displayName": "KanbunSE",
+    "description": "Language support and execution for KanbunSE (Kanbun S-expression)",
+    "version": "0.1.0",
+    "publisher": "harumoto",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "main": "./dist/extension.js",
+    "activationEvents": [
+        "onLanguage:kanbunse"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Harumoto1103/KanbunSE-VSCode.git"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "kanbunse",
+                "aliases": [
+                    "KanbunSE",
+                    "kanbunse"
+                ],
+                "extensions": [
+                    ".kse"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "kanbunse",
+                "path": "./snippets/kanbunse.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "kanbunse",
+                "scopeName": "source.kse",
+                "path": "./syntaxes/kanbunse.tmLanguage.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "kanbunse.run",
+                "title": "Run KanbunSE",
+                "icon": "$(play)"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "when": "resourceLangId == kanbunse",
+                    "command": "kanbunse.run",
+                    "group": "navigation"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "KanbunSE Configuration",
+            "properties": {
+                "kanbunse.racketPath": {
+                    "type": "string",
+                    "default": "/opt/homebrew/bin/racket",
+                    "description": "Path to the Racket executable."
+                },
+                "kanbunse.interpreterPath": {
+                    "type": "string",
+                    "default": "/Users/harumoto/KanbunSE/main.rkt",
+                    "description": "Path to the KanbunSE interpreter (main.rkt)."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.60.0",
+        "@types/node": "^14.x",
+        "typescript": "^4.4.0"
+    }
+}

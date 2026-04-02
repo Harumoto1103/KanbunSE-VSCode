@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "KanbunSE",
+    "scopeName": "source.kse",
+    "patterns": [
+        { "include": "#comment" },
+        { "include": "#string" },
+        { "include": "#keyword" },
+        { "include": "#operator" },
+        { "include": "#number" },
+        { "include": "#boolean" }
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [{
+                "name": "comment.line.semicolon.kse",
+                "match": ";.*$"
+            }]
+        },
+        "string": {
+            "patterns": [{
+                "name": "string.quoted.chinese.kse",
+                "begin": "「",
+                "end": "」"
+            }]
+        },
+        "keyword": {
+            "patterns": [{
+                "name": "keyword.control.kse",
+                "match": "\\b(若|則|若非|大衍|自|至|為|遍|夫|施|於|名|以|者|也|立|承|具|能|造|令|之|卦|而|充|為列以)\\b"
+            }]
+        },
+        "operator": {
+            "patterns": [{
+                "name": "keyword.operator.kse",
+                "match": "\\b(加|減|乘|除|所餘|整除|等於|大於|小於|且|或|非)\\b"
+            }]
+        },
+        "number": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.kse",
+                    "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+                },
+                {
+                    "name": "constant.numeric.chinese.kse",
+                    "match": "[\\u4e00-\\u9fa5]+"
+                }
+            ]
+        },
+        "boolean": {
+            "patterns": [{
+                "name": "constant.language.boolean.kse",
+                "match": "\\b(陽|陰)\\b"
+            }]
+        }
+    }
+}

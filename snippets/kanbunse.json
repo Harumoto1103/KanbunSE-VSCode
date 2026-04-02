@@ -1,0 +1,51 @@
+{
+    "Definition": {
+        "prefix": "ming",
+        "body": [
+            "(名 ${1:value} 以 ${2:name})"
+        ],
+        "description": "Definition (名 ... 以 ...)"
+    },
+    "Alternative Definition": {
+        "prefix": "zhe",
+        "body": [
+            "(${1:name} 者 ${2:value} 也)"
+        ],
+        "description": "Definition (... 者 ... 也)"
+    },
+    "Function": {
+        "prefix": "fu",
+        "body": [
+            "(夫 (${1:params}) (\n\t${2:body}\n))"
+        ],
+        "description": "Function Definition (夫)"
+    },
+    "Application": {
+        "prefix": "shi",
+        "body": [
+            "(施 ${1:func} 於 ${2:args})"
+        ],
+        "description": "Function Application (施 ... 於 ...)"
+    },
+    "Print": {
+        "prefix": "shu",
+        "body": [
+            "(書 ${1:expr})"
+        ],
+        "description": "Print (書)"
+    },
+    "If-Then-Else": {
+        "prefix": "ruo",
+        "body": [
+            "(若 ${1:cond} \n\t則 ${2:then} \n\t若非 ${3:else})"
+        ],
+        "description": "Conditional Branch (若 ... 則 ... 若非 ...)"
+    },
+    "Loop": {
+        "prefix": "dayan",
+        "body": [
+            "(大衍 ${1:var} 自 ${2:start} 至 ${3:end} 為 \n\t${4:body}\n)"
+        ],
+        "description": "Loop (大衍 ... 自 ... 至 ... 為 ...)"
+    }
+}
