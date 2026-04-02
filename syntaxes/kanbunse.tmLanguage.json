@@ -27,13 +27,13 @@
         "keyword": {
             "patterns": [{
                 "name": "keyword.control.kse",
-                "match": "\\b(若|則|若非|大衍|自|至|為|遍|夫|施|於|名|以|者|也|立|承|具|能|造|令|之|卦|而|充|為列以)\\b"
+                "match": "(名|以|者|也|夫|施|於|書|未善|若|則|若非|大衍|自|至|為|遍|立|承|具|能|造|令|之|卦|而|充|為列以)"
             }]
         },
         "operator": {
             "patterns": [{
                 "name": "keyword.operator.kse",
-                "match": "\\b(加|減|乘|除|所餘|整除|等於|大於|小於|且|或|非)\\b"
+                "match": "(加|減|乘|除|所餘|整除|等於|大於|小於|且|或|非)"
             }]
         },
         "number": {
@@ -51,7 +51,7 @@
         "boolean": {
             "patterns": [{
                 "name": "constant.language.boolean.kse",
-                "match": "\\b(陽|陰)\\b"
+                "match": "(陽|陰)"
             }]
         }
     }

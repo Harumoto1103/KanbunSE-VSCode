@@ -1,51 +1,107 @@
 {
-    "Definition": {
+    "Definition (Standard)": {
         "prefix": "ming",
         "body": [
             "(名 ${1:value} 以 ${2:name})"
         ],
-        "description": "Definition (名 ... 以 ...)"
+        "description": "Define a variable using '名 ... 以 ...'"
     },
-    "Alternative Definition": {
+    "Definition (Alternative)": {
         "prefix": "zhe",
         "body": [
             "(${1:name} 者 ${2:value} 也)"
         ],
-        "description": "Definition (... 者 ... 也)"
+        "description": "Define a variable using '... 者 ... 也'"
     },
     "Function": {
         "prefix": "fu",
         "body": [
             "(夫 (${1:params}) (\n\t${2:body}\n))"
         ],
-        "description": "Function Definition (夫)"
+        "description": "Define a function"
     },
-    "Application": {
+    "Apply/Call": {
         "prefix": "shi",
         "body": [
             "(施 ${1:func} 於 ${2:args})"
         ],
-        "description": "Function Application (施 ... 於 ...)"
+        "description": "Call a function or method"
     },
-    "Print": {
+    "Print (Newline)": {
         "prefix": "shu",
         "body": [
             "(書 ${1:expr})"
         ],
-        "description": "Print (書)"
+        "description": "Print value with a newline"
+    },
+    "Print (No Newline)": {
+        "prefix": "shuw",
+        "body": [
+            "(書 ${1:expr} 未善)"
+        ],
+        "description": "Print value without a newline"
     },
     "If-Then-Else": {
         "prefix": "ruo",
         "body": [
-            "(若 ${1:cond} \n\t則 ${2:then} \n\t若非 ${3:else})"
+            "(若 ${1:condition} \n\t則 ${2:then_expr} \n\t若非 ${3:else_expr})"
         ],
-        "description": "Conditional Branch (若 ... 則 ... 若非 ...)"
+        "description": "Conditional branching (If-Then-Else)"
     },
-    "Loop": {
+    "Loop (Iterator)": {
         "prefix": "dayan",
         "body": [
             "(大衍 ${1:var} 自 ${2:start} 至 ${3:end} 為 \n\t${4:body}\n)"
         ],
-        "description": "Loop (大衍 ... 自 ... 至 ... 為 ...)"
+        "description": "Loop with iterator (for i from start to end)"
+    },
+    "Loop (Repeat)": {
+        "prefix": "wei",
+        "body": [
+            "(為 ${1:expr} ${2:n} 遍)"
+        ],
+        "description": "Repeat an expression n times"
+    },
+    "Create List": {
+        "prefix": "lie",
+        "body": [
+            "(為列以 (${1:items}))"
+        ],
+        "description": "Create a list from items"
+    },
+    "Append to List": {
+        "prefix": "chong",
+        "body": [
+            "(充 ${1:list} 以 ${2:value})"
+        ],
+        "description": "Append an element to a list"
+    },
+    "Class Definition": {
+        "prefix": "li",
+        "body": [
+            "(立 ${1:ClassName} \n\t承 ${2:ParentClass|無} \n\t具 (${3:attributes}) \n\t能 (\n\t\t(${4:method_name} (${5:params}) (\n\t\t\t${6:body}\n\t\t))\n\t)\n)"
+        ],
+        "description": "Define a class with inheritance, attributes, and methods"
+    },
+    "Create Instance": {
+        "prefix": "zao",
+        "body": [
+            "(造 ${1:ClassName} 之實體)"
+        ],
+        "description": "Create a new instance of a class"
+    },
+    "Property Access/Set": {
+        "prefix": "zhi",
+        "body": [
+            "(${1:object} 之 ${2:property})"
+        ],
+        "description": "Access or set an object property"
+    },
+    "Pattern Match": {
+        "prefix": "gua",
+        "body": [
+            "(卦 ${1:expr} 而 (\n\t(${2:case} 則 ${3:result})\n))"
+        ],
+        "description": "Pattern matching (switch/case)"
     }
 }

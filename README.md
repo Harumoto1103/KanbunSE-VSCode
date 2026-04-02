@@ -1,37 +1,30 @@
 # KanbunSE VS Code Extension
 
-This extension provides language support for **KanbunSE** (Kanbun S-expression), a programming language with a syntax inspired by Classical Chinese and S-expressions.
+Language support and execution for **KanbunSE** (Kanbun S-expression), a programming language with Classical Chinese syntax and S-expressions.
 
 ## Features
 
-- **Syntax Highlighting**: Supports keywords, operators, strings (「...」), numbers (including Chinese numbers), and comments (;).
-- **Snippets**: Quick access to common language constructs like `名...以...`, `夫`, `施`, `大衍`, etc.
-- **Language Configuration**: Support for automatic bracket matching and indentation.
+- **Syntax Highlighting**: Full support for Classical Chinese keywords, operators, and S-expressions.
+- **Rich Snippets**: Quick templates for variables (`名`/`者`), functions (`夫`), loops (`大衍`/`為`), classes (`立`/`造`), and more.
+- **Execution Support**: One-click Run button in the editor title bar to execute `.kse` files using Racket.
+- **Configurable Paths**: Customize the path to your Racket executable and KanbunSE interpreter (`main.rkt`) in settings.
 
-## File Support
+## Getting Started
 
-- `.kse`
+1.  Open any `.kse` file.
+2.  Use snippets like `ming` or `fu` to write code.
+3.  Click the **Play icon** in the top-right corner or search for **Run KanbunSE** in the command palette.
 
-## Syntax Example
+## Requirements
 
-```kse
-; 定義
-(名 三點一四一五九二六五三五八九七九 以 圓周率)
-(書 圓周率)
+- [Racket](https://racket-lang.org/) installed on your system.
+- The KanbunSE interpreter (`main.rkt`) should be present on your local machine.
 
-; 函式
-(名 (夫 (甲)
-    (
-        (名 零 以 乙)
-        (大衍 丙 自 一 至 甲 為
-            (乙 者 (加 乙 以 丙) 也)
-        )
-        乙
-    )
-) 以 求和)
+## Configuration
 
-(書 (施 求和 於 百))
-```
+Go to VS Code Settings and search for `KanbunSE`:
+- `KanbunSE: Racket Path`: Path to your `racket` binary (Default: `/opt/homebrew/bin/racket`).
+- `KanbunSE: Interpreter Path`: Path to your `main.rkt` file (Default: `/Users/harumoto/KanbunSE/main.rkt`).
 
 ## License
 
